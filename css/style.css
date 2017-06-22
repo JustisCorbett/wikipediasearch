@@ -1,0 +1,77 @@
+html {
+    height: 100%;
+    width: 100%
+}
+body {
+    font-family: Quicksand, Arial;
+    font-size: 1.75em;
+    height: 100%;   
+    overflow: hidden;  /*makes the body non-scrollable (we will add scrolling to the main content containers)*/
+    margin: 0px;  /*removes default style*/
+    display: flex;  /*enables flex content for its children*/
+    width:100%
+}
+.column {
+    height: 100%;  
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #D0E2ED;
+}
+.flexBar{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    font-family: Titillium Web, Arial;
+    font-size: 2.75em;
+    background-color: #2C79A5;
+    margin: auto;
+    width: 100%;
+    flex: none;
+    overflow: auto;
+}
+.bottom {
+    flex: 1;  /*ensures that the container will take up the full height of the parent container*/
+    overflow-y: auto !important;  /*adds scroll to this container*/
+    background: #D0E2ED;
+    
+}
+.flexBar-item{
+    flex: 1;
+    color: white;
+    justify-content: flex-start;
+    overflow: hidden;
+    margin:auto;
+    align-items: center;
+    display: flex;
+    white-space:nowrap;
+}
+
+.barLink{
+    background: #0877A3;
+    border: none;
+    text-decoration: none;
+    color: white;
+    font-size: 0.75em;
+}
+.barLink:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(#3cb0fd, #0877A3);
+    background-image: -moz-linear-gradient(#3cb0fd, #0877A3);
+    background-image: -o-linear-gradient(#3cb0fd, #0877A3);
+    background-image: linear-gradient(#3cb0fd, #0877A3);
+    text-decoration: none;
+}
+@media screen and (max-width: 900px){
+    body{
+        font-size: 1em;
+    }
+    .flexBar{
+        font-size: 2.25em;
+    }
+}
+@media screen and (max-width: 560px){
+    .flexBar{
+        flex-direction: column;
+    }
+}
